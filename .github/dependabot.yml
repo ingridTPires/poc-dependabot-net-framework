@@ -15,4 +15,5 @@ updates:
       - dependency-name: "Z.EntityFramework.Extensions"
     ignore:
       - dependency-name: "NuGetPackage"
+        versions: ["*"]
         
