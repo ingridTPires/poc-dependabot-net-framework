@@ -1,9 +1,14 @@
 version: 2
+registries:
+  nuget-example:
+    type: nuget-feed
+    url: https://nuget.pkg.github.com/IngridTPires/index.json
+    token: ${{secrets.MY_PACKAGE_TOKEN}}
 updates:
   - package-ecosystem: "nuget"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "daily"    
     open-pull-requests-limit: 1
     reviewers: 
       - "ingridTPires"
@@ -13,4 +18,3 @@ updates:
     target-branch: "main"
     allow:
       - dependency-name: "Z.EntityFramework.Extensions"
-        
