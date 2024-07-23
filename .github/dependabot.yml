@@ -4,11 +4,15 @@ registries:
     type: nuget-feed
     url: https://nuget.pkg.github.com/IngridTPires/index.json
     token: ${{secrets.MY_PACKAGE_TOKEN}}
+  nuget:
+    type: nuget-feed
+    url: https://api.nuget.org/v3/index.json
 updates:
   - package-ecosystem: "nuget"
     directory: "/"
     registries:
       - private-nuget
+      - nuget
     schedule:
       interval: "daily"    
     open-pull-requests-limit: 1
