@@ -24,7 +24,6 @@ updates:
     allow:
       - dependency-name: "Z.EntityFramework.Extensions"
     ignore:
-      - dependency-name: "NuGetPackage"
       - dependency-name: "Newtonsoft.Json"
       
   - package-ecosystem: "nuget"
@@ -35,5 +34,5 @@ updates:
       interval: "daily"    
     open-pull-requests-limit: 1
     ignore:
-      - dependency-name: "*"
+      - dependency-name: "NuGetPackage"
   
