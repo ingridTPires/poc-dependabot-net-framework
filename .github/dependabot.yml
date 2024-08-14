@@ -22,9 +22,9 @@ updates:
       prefix: "chore"
       include: "scope"
     target-branch: "main"
-    allow:
-      - dependency-name: "Z.EntityFramework.Extensions"
-    ignore:
-      - dependency-name: "NuGetPackage"
-      - dependency-name: "Newtonsoft.Json"
+    #allow:
+      #- dependency-name: "Z.EntityFramework.Extensions"
+    #ignore:
+      #- dependency-name: "NuGetPackage"
+      #- dependency-name: "Newtonsoft.Json"
   
