@@ -10,11 +10,10 @@ registries:
 updates:
   - package-ecosystem: "nuget"
     directory: "/"
-    registries:
-      - nuget-packages
+    registries: "*"
     schedule:
       interval: "daily"    
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 10
     reviewers: 
       - "ingridTPires"
     commit-message:
@@ -25,14 +24,4 @@ updates:
       - dependency-name: "Z.EntityFramework.Extensions"
     ignore:
       - dependency-name: "Newtonsoft.Json"
-      
-  - package-ecosystem: "nuget"
-    directory: "/"
-    registries:
-      - private-nuget
-    schedule:
-      interval: "daily"    
-    open-pull-requests-limit: 1
-    ignore:
       - dependency-name: "NuGetPackage"
-  
