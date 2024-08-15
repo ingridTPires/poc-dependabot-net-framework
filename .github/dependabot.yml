@@ -12,6 +12,7 @@ updates:
     directory: "/"
     registries:
       - nuget-packages
+      - private-nuget
     schedule:
       interval: "daily"    
     open-pull-requests-limit: 1
@@ -22,5 +23,5 @@ updates:
       include: "scope"
     target-branch: "main"
     allow:
-      - dependency-name: "Z.EntityFramework.Extensions"
+      - dependency-name: "*"
   
