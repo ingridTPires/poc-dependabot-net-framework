@@ -4,18 +4,13 @@ registries:
     type: nuget-feed
     url: https://nuget.pkg.github.com/IngridTPires/index.json
     token: ${{secrets.MY_PACKAGE_TOKEN}}
-  nuget-packages:
-    type: nuget-feed
-    url: https://api.nuget.org/v3/index.json
 updates:
   - package-ecosystem: "nuget"
     directory: "/"
-    registries:
-      - nuget-packages
-      - private-nuget
+    registries: "*"
     schedule:
       interval: "daily"    
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 40
     reviewers: 
       - "ingridTPires"
     commit-message:
@@ -23,5 +18,8 @@ updates:
       include: "scope"
     target-branch: "main"
     allow:
-      - dependency-name: "*"
+      - dependency-name: "Z.EntityFramework.Extensions"
+    ignore:
+      - dependency-name: "NuGetPackage"
+      - dependency-name: "Newtonsoft.Json"
   
