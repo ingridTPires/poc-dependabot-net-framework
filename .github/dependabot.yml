@@ -10,7 +10,7 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"    
-    open-pull-requests-limit: 40
+    open-pull-requests-limit: 5
     reviewers: 
       - "ingridTPires"
     commit-message:
